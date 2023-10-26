@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body>
+    <div id = "container">
+        <div>
+            <h1 class = "title">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class = "tipsForm" id = 'tipsForm' >
+                <label for="bill">
+                    <p>Quanto ficou a conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="100" name="bill" id = "bill" class = "formInput" >
+                </p>
+                <label for="serviceQual">
+                    <p>Como foi seu serviço?</p>
+                </label>
+                <p>
+                    <select name="serviceQual" id = "serviceQual" class = "formSelect" >
+                        <option disable selected>-- Escolha uma opção</option>
+                        <option value = 0.3>30% - Incrivel</option>
+                        <option value = 0.2>20% - Otimo</option>
+                        <option value = 0.15>15% - Aceitavel</option>
+                        <option value = 0.1>10% - Ruim</option>
+                        <option value = 0.05>05% - Pessimo</option>
+                    </select>
+                </p>
+                <label for="pessoasConta">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder=1 name="pessoasConta" id="pessoasConta" class = "formInput" >pessoa(s)
+                </p>
+                <button type="submit" class="formSubmit">Calcular!</button>
+            </form>
+        </div>
+        <div id = "totalTip">
+            Gorjeta Total:
+            R$<span id = "tip"></span>
+            <span id = "each">cada</span>
+        </div>
+    </div>
+    <script type = "text/javascript" src="script.js"></script>
+</body>
+</html>
